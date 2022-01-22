@@ -65,19 +65,6 @@ $g(n) \in o(f(n))$ means that for **every** positive constant $c$, there exists 
 .  
 .  
 .  
-
-
-2. (3 pts) **Python to SPARC**
- 
-Recall the `sum_list_recursive_parallel` function from lecture 2. Specify our implementation in SPARC here.  
-
-.  
-.  
-.  
-.  
-.  
-.  
-.  
 .  
 .  
 .  
@@ -92,9 +79,9 @@ Recall the `sum_list_recursive_parallel` function from lecture 2. Specify our im
 
 
 
-3. **SPARC to Python**
+2. **SPARC to Python**
 
-Consider the following SPARC code:  
+Consider the following SPARC code of the Fibonacci sequence, which is the series of numbers where each number is the sum of the two preceding numbers. For example, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610 ... 
 $$
 \begin{array}{l}
 \mathit{foo}~x =   \\
@@ -107,9 +94,9 @@ $$
 \end{array}
 $$ 
 
-  - 3a. (4 pts) Translate this to Python code -- fill in the `def foo` method in `main.py`  
+  - 2a. (4 pts) Translate this to Python code -- fill in the `def foo` method in `main.py`  
 
-  - 3b. (2 pts) What does this function do, in your own words?  
+  - 2b. (2 pts) What does this function do, in your own words?  
 
 .  
 .  
@@ -120,7 +107,7 @@ $$
   
 
 
-4. **Parallelism and recursion**
+3. **Parallelism and recursion**
 
 Consider the following function:  
 
@@ -136,26 +123,10 @@ def longest_run(myarray, key)
 ```
 E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`  
  
-  - 4a. (8 pts) First, implement an iterative, sequential version of `longest_run` in `main.py`.  
+  - 3a. (8 pts) First, implement an iterative, sequential version of `longest_run` in `main.py`.  
 
-  - 4b. (4 pts) What is the Work and Span of this implementation?  
+  - 3b. (4 pts) What is the Work and Span of this implementation?  
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-
-
-  - 4c. (8 pts) Next, implement a `longest_run_recursive`, a recursive, divide and conquer implementation. This is analogous to our implementation of `sum_list_recursive`. To do so, you will need to think about how to combine partial solutions from each recursive call. Make use of the provided class `Result`.   
-
-  - 4d. (4 pts) What is the Work and Span of this sequential algorithm?  
-.  
-.  
 .  
 .  
 .  
@@ -167,7 +138,23 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 .  
 
 
-  - (3 pts) 4e. Assume that we parallelize in a similar way we did with `sum_list_recursive`. That is, each recursive call spawns a new thread. What is the Work and Span of this algorithm?  
+  - 3c. (8 pts) Next, implement a `longest_run_recursive`, a recursive, divide and conquer implementation. This is analogous to our implementation of `sum_list_recursive`. To do so, you will need to think about how to combine partial solutions from each recursive call. Make use of the provided class `Result`.   
+
+  - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+.  
+
+
+  - 3e. (3 pts) Assume that we parallelize in a similar way we did with `sum_list_recursive`. That is, each recursive call spawns a new thread. What is the Work and Span of this algorithm?  
 
 .  
 .  
