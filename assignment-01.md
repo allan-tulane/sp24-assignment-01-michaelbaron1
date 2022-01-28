@@ -41,42 +41,6 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
 .  
-.  
-.  
-.  
-
-  - 1g. Consider the definition of "Little o" notation:
-  
-$g(n) \in o(f(n))$ means that for **every** positive constant $c$, there exists a constant $n_0$ such that $g(n) \le c \cdot f(n)$ for all $n \ge n_0$. There is an analogous definition for "little omega" $\omega(f(n))$. The distinction between $o(f(n))$ and $O(f(n))$ is that the former requires the condition to be met for **every** $c$, not just for some $c$. For example, $10x \in o(x^2)$, but $10x^2 \notin o(x^2)$.  
-
-.  
-
-**Prove** that $o(g(n)) \cap \omega(g(n))$ is the empty set.  
-
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.
-.  
-.  
-.  
-.  
-
-
 
 
 2. **SPARC to Python**
@@ -94,10 +58,12 @@ $$
 \end{array}
 $$ 
 
-  - 2a. (4 pts) Translate this to Python code -- fill in the `def foo` method in `main.py`  
+  - 2a. (6 pts) Translate this to Python code -- fill in the `def foo` method in `main.py`  
 
-  - 2b. (2 pts) What does this function do, in your own words?  
+  - 2b. (5 pts) What does this function do, in your own words?  
 
+.  
+.  
 .  
 .  
 .  
@@ -105,7 +71,6 @@ $$
 .  
 .  
   
-
 
 3. **Parallelism and recursion**
 
