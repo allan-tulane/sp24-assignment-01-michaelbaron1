@@ -25,7 +25,17 @@ class Result:
         return('longest_size=%d left_size=%d right_size=%d is_entire_range=%s' %
               (self.longest_size, self.left_size, self.right_size, self.is_entire_range))
     
-    
+
+def to_value(v):
+    """
+    if it is a Result object, return longest_size.
+    else return v
+    """
+    if type(v) == Result:
+        return v.longest_size
+    else:
+        return int(v)
+        
 def longest_run_recursive(mylist, key):
     ### TODO
     pass
