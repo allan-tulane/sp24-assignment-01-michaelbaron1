@@ -30,15 +30,7 @@ def test_longest_run_hard():
     """
     assert to_value(longest_run([6, 12, 12, 12, 12, 6, 6, 6], 12)) == 4
 
-def to_value(v):
-    """
-    if it is a Result object, return longest_size.
-    else return v
-    """
-    if type(v) == Result:
-        return v.longest_size
-    else:
-        return int(v)
+
 
 def test_longest_run_recursive_none():
     assert to_value(longest_run_recursive([2,12,12,8,12,12,12,0,12,1], 999)) == 0
